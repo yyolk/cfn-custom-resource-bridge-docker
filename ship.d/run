@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/bin/env_parse /etc/cfn/aws-credentials.j2
+chmod 500 /etc/cfn/aws-credentials
+cfn-resource-bridge --no-daemon -v
